@@ -1,5 +1,26 @@
 #include "PolishFromInfix.h"
+#include "stack.h"
 
+
+
+PolishFromInfix::PolishFromInfix(char* a)
+{
+  LenOfInfix = strlen(a);
+  int i = 0;
+  Infix = new char[LenOfInfix + 1];
+  while (a[i] != 0) {
+    Infix[i] = a[i];
+    i++;
+  }
+  Infix[LenOfInfix] = 0;
+}
+
+PolishFromInfix::PolishFromInfix()
+{
+  delete[] Infix;
+  delete[] PolishExp;
+
+}
 int PolishFromInfix::GetPrioritetOfOperation(char simbol) {
   int priorit;
   switch (simbol) {

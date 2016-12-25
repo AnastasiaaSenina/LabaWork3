@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "PolishFromInfix.h"
+#include "stack.h"
 
 TEST(ConvertMathEXpression, Example_0_to_can_convert_correct_exp_right)
 {
